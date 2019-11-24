@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Add a Customer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+            <h1>Result</h1>
+        <p th:text="'First Name: ' + ${customer.firstName}" />
+        <p th:text="'Last Name: ' + ${customer.lastName}" />
+        <a href="/customer/add">Add another customer</a>
+    </body>
+</html>

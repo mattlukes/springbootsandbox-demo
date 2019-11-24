@@ -12,7 +12,9 @@ public class DemoWebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/greeting/").permitAll()
+                .antMatchers("/greeting/**").permitAll()
+                .antMatchers("/customer/**").permitAll()
+                .antMatchers("/searchCustomer/**").permitAll()
                 .anyRequest().authenticated();
     }
 }
